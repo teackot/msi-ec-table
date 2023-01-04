@@ -4,19 +4,23 @@
 |-------------------------|-------------------|------------------------|-------------------------------|-----------------------|
 | FW version              | 17F2EMS1.106      | 1552EMS1.118           | 1592EMS1.111                  | 14C1EMS1.101          |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | webcam address          | 0x2e              | 0x2e                   | 0x2e                          | 0x2e                  |
 | webcam on               | 0x4a              | bit1                   |                               |                       |
 | webcam off              | 0x48              | bit1                   |                               |                       |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | Fn/Win address          | 0xbf              | 0xe8                   | 0xe8                          | n/a ?                 |
 | Fn/Win                  | 0x40              | bit4 <- 1              |                               |                       |
 | Win/Fn                  | 0x50              | bit4 <- 0              |                               |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | battery mode address    | 0xef              | 0xd7                   | 0xef or 0xd7                  | 0xef or 0xd7          |
 | max                     | 0xe4              | 0xe4                   |                               |                       |
 | balanced                | 0xd0              | 0xd0                   |                               |                       |
 | min                     | 0xbc              | 0xbc                   |                               |                       |
 | super bat. mode address | n/a ?             | n/a ?                  | 0xeb                          | n/a ?                 |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | battery charge address  | n/a ?             | n/a ?                  | 0x42                          | 0x42                  |
 | charging status address | n/a ?             | n/a ?                  | 0x31                          | 0x31                  |
@@ -26,13 +30,16 @@
 | full                    | n/a ?             | n/a ?                  | 0x09                          | 0x09                  |
 | full, no power          | n/a ?             | n/a ?                  | 0x0d                          | 0x0d                  |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | power address           | n/a ?             | 0x30                   | n/a ?                         | n/a ?                 |
 | PW lid open             | n/a ?             | bit1                   | n/a ?                         | n/a ?                 |
 | PW AC connected         | n/a ?             | bit0                   | n/a ?                         | n/a ?                 |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | cooler boost address    | 0x98              | 0x98                   | 0x98                          | 0x98                  |
 | CB on                   | 0x82              | bit7 <- 1 ?            |                               |                       |
 | CB off                  | 0x02              | bit7 <- 0 ?            |                               |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | shift mode address      | 0xf2              | 0xf2                   | 0xd2                          | n/a ?                 |
 | SM turbo                | 0xc4              | n/a                    |                               | ?                     |
@@ -43,6 +50,7 @@
 | SM eco                  | 0xc2              | 0xc2                   | SM 2: 0xc2                    | ?                     |
 | SM off                  | 0x80              | 0x80                   | SM off: ?                     | ?                     |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | FW version address      | 0xa0              | 0xa0                   |                               |                       |
 | FW version length       | 12                | 12                     |                               |                       |
 | FW date address         | 0xac              | 0xac                   |                               |                       |
@@ -50,11 +58,13 @@
 | FW time address         | 0xb4              | 0xb4                   |                               |                       |
 | FW time length          | 8                 | 8                      |                               |                       |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | charge control address  | 0xef              |                        |                               |                       |
 | CC offset start         | 0x8a              |                        |                               |                       |
 | CC offset end           | 0x80              |                        |                               |                       |
 | CC range min            | 0x8a              |                        |                               |                       |
 | CC range max            | 0xe4              |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | CPU (realtime, basic)   |                   |                        |                               |                       |
 | RT temp address         | 0x68              | 0x68                   | 0x68                          |                       |
@@ -65,9 +75,11 @@
 | BS fan speed base min   | 0x00              | n/a                    |                               |                       |
 | BS fan speed base max   | 0x0f              | n/a                    |                               |                       |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | GPU (realtime, basic)   |                   |                        |                               |                       |
 | RT temp address         | 0x80              | 0x80                   | 0x80                          |                       |
 | RT fan speed address    | 0x89              | 0x89                   | 0xcb (?)                      |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | fan mode address        | 0xf4              | 0xd4                   | 0xd4 or 0xf4                  | 0xd4 or 0xf4          |
 | FM auto                 | 0x0d              | n/a ?                  | 0x0d                          | probably same         |
@@ -75,12 +87,14 @@
 | FM basic                | 0x4d (bit6 ?)     | 0x4d? (bit6), unused   | 0x4d                          | probably same         |
 | FM advanced             | 0x8d              | 0x8d? (bit7)           | 0x8d                          | probably same         |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | LED                     |                   |                        |                               |                       |
 | LED mic mute address    | 0x2b              | 0x2c                   |                               |                       |
 | LED mute address        | 0x2c              | 0x2d                   |                               |                       |
 | LED state mask          | 0x4               | mute/micmute bit: bit1 |                               |                       |
 | LED state off           | 0x80              | bit1                   |                               |                       |
 | LED state on            | 0x84              | bit1                   |                               |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | keyboard backlight      |                   |                        |                               |                       |
 | BL mode address         | n/a ?             | n/a ?                  | 0x2c                          | n/a ?                 |
@@ -93,11 +107,13 @@
 | BL state half           | 0x82              | 0x82                   | 0x82                          | 0x82                  |
 | BL state full           | 0x83              | 0x83                   | 0x83                          | 0x83                  |
 |                         |                   |                        |                               |                       |
+|                         |                   |                        |                               |                       |
 | cam address             | 0x2e              | 0x2e                   |                               |                       |
 | cam hard address        | 0x2f              | 0x2f                   |                               |                       |
 | cam state mask          | 0x2               | webcam bit: bit1       |                               |                       |
 | cam state off           | 0x80              | bit1                   |                               |                       |
 | cam state on            | 0x84              | bit1                   |                               |                       |
+|                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | usb power share address | n/a ?             | n/a ?                  | 0xbf                          | n/a ?                 |
 | USB PS off              | n/a ?             | n/a ?                  | 0x08                          | n/a ?                 |
