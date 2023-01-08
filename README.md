@@ -93,11 +93,11 @@
 |                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | LED                     |                   |                        |                               |                       |
-| LED mic mute address    | 0x2b              | 0x2c                   |                               | 0x2b                  |
-| LED mute address        | 0x2c              | 0x2d                   |                               | 0x2c                  |
+| LED mic mute address    | 0x2b              | 0x2c                   | 0x2b                          | 0x2b                  |
+| LED mute address        | 0x2c              | 0x2d                   | 0x2c                          | 0x2c                  |
 | LED state mask          | 0x4               | mute/micmute bit: bit1 |                               |                       |
-| LED state off           | 0x80 (bit2)       | bit1                   |                               | bit2                  |
-| LED state on            | 0x84 (bit2)       | bit1                   |                               | bit2                  |
+| LED state off           | 0x80 (bit2)       | bit1                   | bit1                          | bit2                  |
+| LED state on            | 0x84 (bit2)       | bit1                   | bit1                          | bit2                  |
 |                         |                   |                        |                               |                       |
 |                         |                   |                        |                               |                       |
 | keyboard backlight      |                   |                        |                               |                       |
